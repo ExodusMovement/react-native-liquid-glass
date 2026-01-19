@@ -20,7 +20,7 @@ using namespace facebook::react;
 @end
 
 @implementation LiquidGlassContainerView {
-  LiquidGlassConatinerViewImpl * _view;
+  LiquidGlassContainerViewImpl * _view;
 }
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
@@ -34,7 +34,7 @@ using namespace facebook::react;
     static const auto defaultProps = std::make_shared<const LiquidGlassContainerViewProps>();
     _props = defaultProps;
     
-    _view = [[LiquidGlassConatinerViewImpl alloc] init];
+    _view = [[LiquidGlassContainerViewImpl alloc] init];
     
     self.contentView = _view;
   }

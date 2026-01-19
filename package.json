@@ -32,11 +32,10 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace @callstack/liquid-glass-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "clean": "del-cli android/build lib",
     "prepare": "bob build",
     "release": "release-it --only-version"
   },
@@ -81,21 +80,16 @@
     "react-native": "0.81.0",
     "react-native-builder-bob": "^0.40.13",
     "release-it": "^17.10.0",
-    "turbo": "^1.10.7",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": ">=18.0.0",
+    "react-native": ">=0.80.0"
   },
-  "workspaces": [
-    "example"
-  ],
   "packageManager": "yarn@3.6.1",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
   },
