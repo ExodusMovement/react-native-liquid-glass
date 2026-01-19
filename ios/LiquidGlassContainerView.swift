@@ -3,7 +3,7 @@ import UIKit
 #if compiler(>=6.2)
 
 @available(iOS 26.0, tvOS 26.0, *)
-@objc public class LiquidGlassConatinerViewImpl: UIVisualEffectView {
+@objc public class LiquidGlassContainerViewImpl: UIVisualEffectView {
   @objc public var spacing: CGFloat = 0 {
     didSet {
       setupView()
@@ -23,6 +23,6 @@ import UIKit
 
 #else
 
-@objc public class LiquidGlassConatinerViewImpl: UIView {}
+@objc public class LiquidGlassContainerViewImpl: UIView {}
 
 #endif
