@@ -1,5 +1,5 @@
 {
-  "name": "@callstack/liquid-glass",
+  "name": "@exodus/react-native-liquid-glass",
   "version": "0.7.0",
   "description": "Liquid Glass in React Native",
   "main": "./lib/module/index.js",
@@ -46,17 +46,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/callstack/liquid-glass.git"
+    "url": "git+https://github.com/ExodusMovement/react-native-liquid-glass.git"
   },
   "author": "Oskar Kwaśniewski <oskarkwasniewski@icloud.com> (https://github.com/okwasniewski)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/callstack/liquid-glass/issues"
+    "url": "https://github.com/ExodusMovement/react-native-liquid-glass/issues"
   },
-  "homepage": "https://github.com/callstack/liquid-glass#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+  "homepage": "https://github.com/ExodusMovement/react-native-liquid-glass#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/compat": "^1.2.7",
