@@ -3,7 +3,10 @@ import {
   type ViewProps,
   type ColorValue,
 } from 'react-native';
-import type { WithDefault } from 'react-native/Libraries/Types/CodegenTypes';
+import type {
+  WithDefault,
+  BubblingEventHandler,
+} from 'react-native/Libraries/Types/CodegenTypes';
 
 export interface NativeProps extends ViewProps {
   /**
@@ -33,6 +36,10 @@ export interface NativeProps extends ViewProps {
    * Defaults to 'system'.
    */
   colorScheme?: WithDefault<'light' | 'dark' | 'system', 'system'>;
+  /**
+   * Called when the view is pressed.
+   */
+  onPress?: BubblingEventHandler<{}>;
 }
 
 export default codegenNativeComponent<NativeProps>('LiquidGlassView');

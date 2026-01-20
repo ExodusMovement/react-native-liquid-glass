@@ -36,13 +36,25 @@ using namespace facebook::react;
   if (self = [super initWithFrame:frame]) {
     static const auto defaultProps = std::make_shared<const LiquidGlassViewProps>();
     _props = defaultProps;
-    
+
     _view = [[LiquidGlassViewImpl alloc] init];
-    
+
     self.contentView = _view;
+
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handlePress)];
+    [self addGestureRecognizer:tapGesture];
   }
-  
+
   return self;
+}
+
+- (void)handlePress
+{
+  if (_eventEmitter) {
+    auto eventEmitter = std::static_pointer_cast<LiquidGlassViewEventEmitter const>(_eventEmitter);
+    eventEmitter->onPress({});
+  }
 }
 
 #if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 260000) || \
