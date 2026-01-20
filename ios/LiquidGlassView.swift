@@ -33,10 +33,7 @@ import UIKit
   public override func layoutSubviews() {
     if (self.effect != nil) { return }
     setupView()
-
-    if isFirstMount {
-      isFirstMount = false
-    }
+    isFirstMount = false
   }
 
 
@@ -80,6 +77,12 @@ import UIKit
 
 #else
 
-@objc public class LiquidGlassViewImpl: UIView {}
+@objc public class LiquidGlassViewImpl: UIView {
+  @objc public var effectTintColor: UIColor?
+  @objc public var interactive: Bool = false
+  @objc public var style: LiquidGlassEffect = .regular
+
+  @objc public func setupView() {}
+}
 
 #endif
